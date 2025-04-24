@@ -1,0 +1,68 @@
+
+table {
+    border-collapse: collapse;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1000px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+    color: #007bff;
+}
+h1{
+    text-align: center;
+    padding-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+img {
+    border-radius: 5px;
+}
+/* Cập nhật phần button-container */
+.button-container {
+    display: flex;           /* Sử dụng flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    gap: 20px;              /* Khoảng cách giữa 2 nút */
+    margin: 20px auto;      /* Cách table phía trên */
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Sửa lại button để không bị block */
+.button-container button {
+    display: inline-block;  /* Thay vì block */
+    margin: 0;              /* Bỏ margin auto */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+a:hover{
+    background-color: aqua;
+}
