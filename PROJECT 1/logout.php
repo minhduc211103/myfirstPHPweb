@@ -3,6 +3,10 @@
 
 session_start();
 include "constant.php";
+if (!isset($_SESSION["name"]) || $_SESSION["name"] !== "user") {
+    header("Location: login.php");
+    exit();
+}
 
 
 // xóa hết mọi dữ liệu session
