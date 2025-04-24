@@ -1,4 +1,6 @@
 <?php
+include "constant.php";
+
 require_once 'connectDB.php';
 session_start();
 if(!isset($_SESSION["name"]) || $_SESSION["name"]!=="user"){
