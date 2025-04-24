@@ -128,7 +128,7 @@ if (isset($_GET['this_id'])) {
 
 
 ?>
-<link rel="stylesheet" href="suaDuLieu.php">
+<link rel="stylesheet" href="suaDuLieu.css">
 <form action="" method="POST" enctype="multipart/form-data">
 
     <h1>Sửa thông tin</h1>
