@@ -1,5 +1,7 @@
 <?php
 session_start();
+include "constant.php";
+
 echo '<link rel="stylesheet" href="login.css">';
 require_once 'connectDB.php';
 
