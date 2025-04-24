@@ -2,6 +2,8 @@
 include "constant.php";
 
 require_once "connectDB.php";
+include "constant.php";
+
 echo '<link rel="stylesheet" href="xoaDuLieu.css">';
 if (!isset($_GET['this_id'])) {
     header("location:showDuLieu.php");

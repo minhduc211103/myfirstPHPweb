@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "constant.php";
 require_once 'connectDB.php';
 include "constant.php";
 
