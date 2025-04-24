@@ -1,5 +1,5 @@
 <?php
-include "constant.php";
+
 session_start();
 include "constant.php";
 
@@ -9,11 +9,6 @@ if (isset($_SESSION["name"]) && $_SESSION["name"] == "user") {
     header("Location: showDuLieu.php");
     exit();
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> d87e2b791d5c54eaf36e9e07581b460ecae9c73b
-
 $thongBao = "";
 if (isset($_POST["btn"])) {
 

@@ -44,12 +44,7 @@ try {
     <td>{$row['giaSanPham']}</td>
     <td>{$row['baoHanh']}</td>
     <td><a href='xoaDuLieu.php?this_id={$row['idSanPham']}'>Xóa</a> |  <a href='suaDuLieu.php?this_id={$row['idSanPham']} '>Sửa</a> </td>
-<<<<<<< HEAD
-=======
-    
 
->>>>>>> d87e2b791d5c54eaf36e9e07581b460ecae9c73b
-    
 
 </tr>";
     }

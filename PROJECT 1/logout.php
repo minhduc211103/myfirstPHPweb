@@ -8,19 +8,8 @@ if (!isset($_SESSION["name"]) || $_SESSION["name"] !== "user") {
     exit();
 }
 
-<<<<<<< HEAD
-include "constant.php";
-if (!isset($_SESSION["name"]) || $_SESSION["name"] !== "user") {
-    header("Location: login.php");
-    exit();
-}
-
-
-// Xóa mọi dữ liệu session
-=======
 
 // xóa hết mọi dữ liệu session
->>>>>>> d87e2b791d5c54eaf36e9e07581b460ecae9c73b
 $_SESSION = [];
 
 // xóa cookie session
@@ -33,8 +22,7 @@ if (ini_get("session.use_cookies")) {
 
 
         $params["path"],           // lấy thông tin từ session hiện tại
-        $params["domain"],  
->>>>>>> d87e2b791d5c54eaf36e9e07581b460ecae9c73b
+        $params["domain"],
         $params["secure"],
         $params["httponly"]
     );
