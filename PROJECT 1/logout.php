@@ -2,6 +2,8 @@
 
 
 session_start();
+include "constant.php";
+
 
 // xóa hết mọi dữ liệu session
 $_SESSION = [];
