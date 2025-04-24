@@ -43,7 +43,7 @@ try {
     <td><img src='img/product/" . htmlspecialchars($row['anhSanPham']) . "' width='100'></td>
     <td>{$row['giaSanPham']}</td>
     <td>{$row['baoHanh']}</td>
-    <td><a href='xoaDuLieu.php?this_id={$row['idSanPham']}'>Xóa</a> |  <a href='sua.php?this_id={$row['idSanPham']} '>Sửa</a> </td>
+    <td><a href='xoaDuLieu.php?this_id={$row['idSanPham']}'>Xóa</a> |  <a href='suaDuLieu.php?this_id={$row['idSanPham']} '>Sửa</a> </td>
     
 
     
