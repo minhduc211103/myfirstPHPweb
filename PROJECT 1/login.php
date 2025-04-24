@@ -4,7 +4,7 @@ include "constant.php";
 
 echo '<link rel="stylesheet" href="login.css">';
 require_once 'connectDB.php';
-if (isset($_SESSION["name"]) || $_SESSION["name"] == "user") {
+if (isset($_SESSION["name"]) && $_SESSION["name"] == "user") {
     header("Location: showDuLieu.php");
     exit();
 }
