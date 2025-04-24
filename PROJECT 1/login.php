@@ -1,7 +1,12 @@
 <?php
+include "constant.php";
 session_start();
 echo '<link rel="stylesheet" href="login.css">';
 require_once 'connectDB.php';
+if (isset($_SESSION["name"]) && $_SESSION["name"] == "user") {
+    header("Location: showDuLieu.php");
+    exit();
+}
 
 
 $thongBao = "";
@@ -16,12 +21,12 @@ if (isset($_POST["btn"])) {
             $thongBao .= MSG_0_All;
         } elseif (empty($email)) {
             $thongBao .= MSG_0_Email;
-        }elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $thongBao .= MSG_format_Email;
         } elseif (empty($matKhau)) {
-            $thongBao .= MSG_0_MatKhau ;
-        }   elseif (strlen($matKhau) > 20) {
-            $thongBao .=MSG_length_MatKhau ;
+            $thongBao .= MSG_0_MatKhau;
+        } elseif (strlen($matKhau) > 20) {
+            $thongBao .= MSG_length_MatKhau;
         } else {
             $sql = "SELECT * FROM taiKhoan WHERE email = ?";
             $stmt = $pdo->prepare($sql);
@@ -31,10 +36,10 @@ if (isset($_POST["btn"])) {
                 $thongBao .= MSG_0tontai_Email;
             } else {
 
-            
+
                 if ($matKhau === $ketQua["password"]) {
 
-                    $_SESSION['name']="user";
+                    $_SESSION['name'] = "user";
                     header('Location:showDuLieu.php');
                     exit();
                 } else {

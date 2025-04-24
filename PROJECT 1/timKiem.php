@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once 'connectDB.php';
+include "constant.php";
+
 
 if (!isset($_SESSION['name']) || $_SESSION['name'] != "user") {
     header("location:login.php");
@@ -45,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                 ";
                     }
                 } else {
-                    $thongBao .=MSG_0tontai_Ten;
+                    $thongBao .= MSG_0tontai_Ten;
                 }
             } else {
                 $htmlRow = "

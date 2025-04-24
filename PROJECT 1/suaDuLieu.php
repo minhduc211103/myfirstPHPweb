@@ -68,7 +68,7 @@ if (isset($_GET['this_id'])) {
                         } elseif (!in_array(strtolower(pathinfo($anh["name"], PATHINFO_EXTENSION)), ['jpg', 'jpeg', 'png'])) {
                             $thongBao .= MSG_regax_Anh;
                         } elseif ($anh['size'] > 5 * 1024 * 1024) {
-                            $thongBao .=MSG_size_Anh;
+                            $thongBao .= MSG_size_Anh;
                         } elseif (file_exists($linkFile . $anh['name'])) {
                             $thongBao .= MSG_tontai_Anh;
                         } else {
@@ -128,7 +128,7 @@ if (isset($_GET['this_id'])) {
 
 
 ?>
-<link rel="stylesheet" href="suaDuLieu.php">
+<link rel="stylesheet" href="suaDuLieu.css">
 <form action="" method="POST" enctype="multipart/form-data">
 
     <h1>Sửa thông tin</h1>

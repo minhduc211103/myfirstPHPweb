@@ -44,14 +44,14 @@ if (isset($_POST['btn'])) {
             $thongBao .= MSG_0_Anh;
         } elseif ($anh['size'] > 5 * 1024 * 1024) {
             $thongBao .= MSG_size_Anh;
-        }elseif (strlen($_FILES['anh']['name']) > 200) {
+        } elseif (strlen($_FILES['anh']['name']) > 200) {
             $thongBao .= MSG_length_Anh;
-        }  elseif (!in_array(strtolower(pathinfo($_FILES["anh"]["name"], PATHINFO_EXTENSION)), ['jpg', 'jpeg', 'png'])) {
+        } elseif (!in_array(strtolower(pathinfo($_FILES["anh"]["name"], PATHINFO_EXTENSION)), ['jpg', 'jpeg', 'png'])) {
             $thongBao .= MSG_regax_Anh;
         } elseif (file_exists($duongDan)) {
             $thongBao .= MSG_tontai_Anh;
         } elseif (!file_exists($thuMuc)) {
-            if (!mkdir($thuMuc, 0777, true)) { // Tạo thư mục nếu không tồn tại
+            if (!mkdir($thuMuc, 0777, true)) { // tạo thư mục nếu không tồn tại 
                 $thongBao .= "Không thể tạo thư mục lưu ảnh!";
             }
         } elseif (empty($gia)) {
@@ -59,13 +59,13 @@ if (isset($_POST['btn'])) {
         } elseif (!is_numeric($gia)) {
             $thongBao .= MSG_not_Gia;
         } elseif ($gia > 100000000) {
-            $thongBao .= MSG_lonhon_Gia ;
+            $thongBao .= MSG_lonhon_Gia;
         } elseif (empty($baoHanh)) {
             $thongBao .= MSG_0_BaoHanh;
         } elseif (!preg_match('/^[1-9][0-9]?\s?tháng$/', $baoHanh)) {
             $thongBao .= MSG_format_Thang;
         } else {
-       
+
             if (move_uploaded_file($_FILES["anh"]["tmp_name"], $duongDan)) {
 
                 $stmt = $pdo->prepare($sql);

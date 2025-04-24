@@ -3,6 +3,13 @@
 
 session_start();
 
+include "constant.php";
+if (!isset($_SESSION["name"]) || $_SESSION["name"] !== "user") {
+    header("Location: login.php");
+    exit();
+}
+
+
 // Xóa mọi dữ liệu session
 $_SESSION = [];
 
@@ -14,7 +21,7 @@ if (ini_get("session.use_cookies")) {
         '',
         time() - 42000,
         $params["path"],
-        $params["domain"],  
+        $params["domain"],
         $params["secure"],
         $params["httponly"]
     );

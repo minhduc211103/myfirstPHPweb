@@ -1,4 +1,6 @@
 <?php
+include "constant.php";
+
 require_once "connectDB.php";
 
 $sql = "CREATE TABLE IF NOT EXISTS sanPham(

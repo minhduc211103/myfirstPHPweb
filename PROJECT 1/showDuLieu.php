@@ -1,7 +1,9 @@
 <?php
+include "constant.php";
+
 require_once 'connectDB.php';
 session_start();
-if(!isset($_SESSION["name"]) || $_SESSION["name"]!=="user"){
+if (!isset($_SESSION["name"]) || $_SESSION["name"] !== "user") {
     header("Location: login.php");
     exit();
 }
@@ -41,9 +43,7 @@ try {
     <td><img src='img/product/" . htmlspecialchars($row['anhSanPham']) . "' width='100'></td>
     <td>{$row['giaSanPham']}</td>
     <td>{$row['baoHanh']}</td>
-    <td><a href='xoaDuLieu.php?this_id={$row['idSanPham']}'>Xóa</a> |  <a href='sua.php?this_id={$row['idSanPham']} '>Sửa</a> </td>
-    
-
+    <td><a href='xoaDuLieu.php?this_id={$row['idSanPham']}'>Xóa</a> |  <a href='suaDuLieu.php?this_id={$row['idSanPham']} '>Sửa</a> </td>
     
 
 </tr>";
@@ -56,7 +56,6 @@ try {
             <a href='timKiem.php'><button>Tìm Kiếm</button></a>
 
           </div>";
-
 } catch (PDOException $a) {
     echo "Lỗi , mã lỗi : " . $a->getMessage();
 }
